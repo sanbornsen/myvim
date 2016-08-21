@@ -16,6 +16,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
 "NERDTree tabs
 Bundle 'jistr/vim-nerdtree-tabs' 
 
@@ -34,7 +35,9 @@ set completeopt-=preview
 set t_Co=256
 syntax on
 set background=dark
-colorscheme distinguished
+"colorscheme distinguished
+"colorscheme 0x7A69_dark
+colorscheme Tomorrow-Night-Eighties
 set nu
 
 set shiftwidth=4
@@ -59,6 +62,12 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
+" Open file in a new tab
+" by default NERDTree
+" let NERDTreeMapOpenInTab='<ENTER>'
+
+map <C-t> :NERDTreeTabsToggle<CR>
+map <C-f> :NERDTreeTabsFind<CR>
 
 " mapping for tabs
 map  <C-l> :tabn<CR>
