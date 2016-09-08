@@ -19,6 +19,8 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 "NERDTree tabs
 Bundle 'jistr/vim-nerdtree-tabs' 
+"typescript syntax
+Bundle 'leafgarland/typescript-vim' 
 
 call vundle#end()
 filetype plugin indent on
@@ -73,3 +75,6 @@ map <C-f> :NERDTreeTabsFind<CR>
 map  <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
 map  <C-n> :tabnew<CR>
+
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
